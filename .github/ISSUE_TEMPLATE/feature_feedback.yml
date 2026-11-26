@@ -1,0 +1,37 @@
+name: 功能建议 / Feature request
+description: 描述写作场景及期望的改进 / Suggest an improvement for your writing workflow
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请用与工作无关的占位文字说明需求，例如「示例章节」「示例正文」，不要上传真实或仿真的公文内容。截图和日志中请遮住用户名、路径和凭据。
+        Use unrelated placeholders such as “Example chapter” and “Example text.” Keep real or simulated official documents out of requests and attachments. Redact usernames, paths and credentials.
+  - type: dropdown
+    id: document_type
+    attributes:
+      label: 文稿类型 / Document type
+      options:
+        - 论文与研究报告 / Papers and research reports
+        - 方案与总结 / Proposals and summaries
+        - 讲话稿与文章 / Speeches and articles
+        - 公文与制度 / Policies and official documents
+        - 流程与操作手册 / Procedures and manuals
+        - 其他（请在下方说明） / Other (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: 写作场景与困难 / What are you trying to do?
+      description: 哪一步最费时间，或需要额外手工处理？ / Describe the step that causes extra work.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望的结果 / Desired outcome
+      description: 请说明希望怎样选择章节、核对引文、处理编号或切换界面风格。 / Describe how you would like to select sections, check citations, handle numbering or switch interface styles.
+    validations:
+      required: true

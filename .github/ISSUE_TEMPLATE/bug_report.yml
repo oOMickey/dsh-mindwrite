@@ -1,0 +1,65 @@
+name: 缺陷报告 / Bug report
+description: 报告安装、编辑、保存或导入导出问题 / Report a reproducible problem
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这是公开表单。请用与工作无关的占位文字复现，例如「示例章节」「示例正文」，不要上传真实或仿真的公文内容。截图和日志中请遮住用户名、路径和凭据。
+        Use unrelated placeholders such as “Example chapter” and “Example text.” Keep real or simulated official documents out of reports and attachments. Redact usernames, paths and credentials.
+  - type: input
+    id: dsh_version
+    attributes:
+      label: DSH 版本 / DSH version
+      placeholder: "0.2.2-rc.3"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统及版本 / Operating system and version
+      placeholder: "Windows 11 x64"
+    validations:
+      required: true
+  - type: dropdown
+    id: host
+    attributes:
+      label: DSH 运行方式 / Host
+      options: [Desktop, Web / CLI]
+    validations:
+      required: true
+  - type: input
+    id: plugin_version
+    attributes:
+      label: 导图写作版本 / Mindwrite version
+      placeholder: "0.8.5"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤 / Steps to reproduce
+      description: 说明如何创建占位文稿，以及依次操作的菜单或按键。 / Describe how you created the placeholder document and which menus or keys you used.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期和实际结果 / Expected and actual results
+      description: 分别写出希望看到的结果和实际现象或报错。 / Describe both outcomes.
+    validations:
+      required: true
+  - type: upload
+    id: screenshot
+    attributes:
+      label: 脱敏截图 / Redacted screenshot
+      description: 请上传只显示占位文字的复现截图，遮住用户名、路径与凭据。 / Attach a screenshot with placeholder text and redact usernames, paths and credentials.
+    validations:
+      required: true
+      accept: ".png,.jpg,.jpeg,.webp,.gif"
+  - type: input
+    id: context
+    attributes:
+      label: 与问题相关的环境 / Additional context
+      description: 可说明鼠标、笔或触屏，改写时选中了哪些占位小节，或导入导出使用的文件格式及 Word/WPS 版本。 / Include the pointing device, selected placeholder sections, or file format and Word/WPS version as relevant.
